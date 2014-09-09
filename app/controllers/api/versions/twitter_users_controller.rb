@@ -8,28 +8,28 @@ module Api::Versions
       # :id_pass_update, :id_pass_destroy, :create_tweet_list, :register_word, :tweet, :follow, :try_search]
 
     def index
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @twitter_users = current_user.twitter_users.all
     end
 
     def show
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
     end
 
     def create
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @twitter_user = current_user.twitter_users.create!(twitter_user_params)
       render action: 'show', status: :created
     end
 
     def update
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @twitter_user.update!(twitter_user_params)
       head :no_content
     end
 
     def destroy
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @twitter_user.destroy!
       head :no_content
     end

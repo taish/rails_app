@@ -7,23 +7,23 @@ module Api::Versions
 
     def index
       # とりあえず親クラス宣言せなエラーでる...
-      RegisterWord
-      specific_assigned_version_process(__callee__, params)
+      # RegisterWord
+      # specific_assigned_version_process(__callee__, params)
       @register_words = create_type.constantize.where(twitter_user_id: current_twitter_user.id)
     end
 
     def show
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
     end
 
     def create
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @register_word = current_twitter_user.register_words.create!(word: params[:word], type: create_type)
       render action: 'show', status: :created
     end
 
     def destroy
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @register_word.destroy!
       render action: 'show', status: :ok
     end

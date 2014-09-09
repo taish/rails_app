@@ -8,29 +8,29 @@ module Api::Versions
     before_action :set_register_word, only: [:create, :build_hatebus]
 
     def index
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @tweets = current_twitter_user.tweets.all
     end
 
     def show
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
     end
 
     # Need register_word_id
     def create
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @tweet = Tweets::CreateService.execute(params, {twitter_user: current_twitter_user, register_word: @register_word})
       render action: 'show', status: :created
     end
 
     def destroy
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @tweet.destroy!
       render action: 'show', status: :ok
     end
 
     def build_hatebus
-      specific_assigned_version_process(__callee__, params)
+      # specific_assigned_version_process(__callee__, params)
       @hatebus = Tweets::BuildHatebusService.execute({twitter_user: current_twitter_user, register_word: @register_word})
     end
 
