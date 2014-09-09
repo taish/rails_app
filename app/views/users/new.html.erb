@@ -1,0 +1,43 @@
+<div class="register_form">
+  <h1>Register</h1>
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any?%>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.text_field :email, placeholder: 'Email address', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, placeholder: 'Password confirmation', class: 'form-control' %>
+    </div>
+    <div class="actions"><%= f.submit class: 'btn btn-lg btn-primary btn-block' %></div>
+  <% end %>
+</div>
+
+<div class="register_form">
+  <h1>Log in</h1>
+
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <%= text_field_tag :email, params[:email], placeholder: 'Email address', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= password_field_tag :password, params[:password], placeholder: 'Password', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= label_tag :remember_me %>
+      <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+    </div>
+    <div class="actions"><%= submit_tag 'Log in', class: 'btn btn-lg btn-primary btn-block' %></div>
+  <% end %>
+</div>

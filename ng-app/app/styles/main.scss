@@ -1,0 +1,167 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+html,
+body,
+#whole {
+  height: 100%;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.side {
+  height: 100%;
+  min-height: 100%;
+
+  width: 280px;
+  float: left;
+  background-color: #f5f5f5;
+  border-right: 1px solid #eee;
+
+  /* Make the masthead heading the same height as the navigation */
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: block;
+    }
+  }
+}
+
+.main {
+  height: 100%;
+  min-height: 100%;
+  width: 1000px;
+  margin-left: 280px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+// for todo
+.btn-toolbar {
+  height: 35px;
+}
+
+.todo-item .todo-title {
+  color: #888;
+}
+
+.done .todo-title {
+  text-decoration: line-through;
+}
+#scroll {
+ overflow: scroll;
+ height: 500px;
+}
+
+
+.tweetsubcontainer {
+  height: 100%;
+  min-height: 100%;
+  width: 280px;
+  // margin-right: auto;
+  padding: 20px;
+  float: left;
+
+  form {
+    top: 160px;
+  }
+}
+.tweetcontainer {
+  height: 100%;
+  margin-left: auto;
+  min-height: 100%;
+  padding: 20px;
+  padding-left: 0px;
+  width: 720px;
+  // width: 280px;
+}
+
+.list-unstyled {
+
+// for friend modal
+.friend-description {
+  height: 100px;
+}
+.input-group-btn {
+  .add-friend-button {
+    height: 100px;
+  }
+}
+
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+// ui.bootstrap
+.modal-content {
+  position:relative;
+  right:75px;
+  width: 800px;
+}
+
+#myTab {
+  height: 43px;
+}

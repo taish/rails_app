@@ -1,0 +1,38 @@
+# Be sure to restart your server when you modify this file.
+
+# Your secret key is used for verifying the integrity of signed cookies.
+# If you change this key, all old signed cookies will become invalid!
+
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure the secrets in this file are kept private
+# if you're sharing your code publicly.
+
+development:
+  client:
+    origin: http://localhost
+  secret_key_base: 8b8099b60a6b46fae7d495a044fae9216421be8d580154398fc6cebb2773463cc1d7331a899597161c65ccf97aeccbdeff7e9ac8e389fda46c08487b7fb4eb4f
+  # twitter client_id and client_secret
+  api_key:
+  api_secret:
+  # doorkeeperの自分のclient_id and client_secret
+  rails_app_id:
+  rails_app_secret:
+
+test:
+  client:
+    origin: http://localhost
+  secret_key_base: f28058d278aab72a92a423ffd62002da60d3b7a1bd316bb182207f23ae1e7fa9694777736eed040642aeb37d8c8a887a384e3b462b5261da792b842ef7c763a3
+  api_key:
+  api_secret: vEjoZJiPDfZCYPwev94KY45ozVh7lCZM7M8Awmp9fdM
+  rails_app_id:
+  rails_app_secret:
+
+production:
+  secret_key_base: f11cb0c41f9560fcf612e741e697588fb489272b5f7912a2bb94ea0681d2672d8eca33232df1abedb5f39c0883daedf342a839418599c26c630cb96ae3a74a11
+  api_key:
+  api_secret:
+  rails_app_id:
+  rails_app_secret:

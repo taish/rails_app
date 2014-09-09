@@ -1,0 +1,2 @@
+module RegisterWordsHelper
+end

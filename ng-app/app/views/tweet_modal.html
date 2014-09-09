@@ -1,0 +1,31 @@
+
+<!-- Modal for inProgress -->
+<!-- <script type="text/ng-template" id="T_inProgress"> -->
+<div class="modal-header">
+  <h3>
+    <span ng-show="remotingProgress < 100">処理中</span>
+    <!-- <span ng-show="remotingProgress == 100">完了</span> -->
+    <div ng-show="remotingProgress == 100">
+      <button type="button" class="btn btn-success" ng-click="addAllTweet()">全て追加</button>
+    </div>
+  </h3>
+  <ul class="list-unstyled">
+    <li class="todo-item" ng-repeat="hatebuTweet in hatebuTweets">
+      <form class="input-group input-group-lg" name="todoForm" ng-submit="doneEdit(todoForm)">
+        <p class="form-control input-lg todo-title">{{ hatebuTweet.title }}</p>
+        <span class="input-group-btn del-btn">
+          <button type="reset" class="btn btn-success" ng-click="addTweet(hatebuTweet)">追加</button>
+        </span>
+      </form>
+    </li>
+  </ul>
+</div>
+<div class="modal-body" ng-show="remotingProgress < 100">
+  <div>データを更新しています...</div>
+  <progressbar ng-class="progress-striped active" value="remotingProgress" type="success"></progressbar>
+</div>
+<div class="modal-footer" ng-show="remotingProgress == 100">
+  <button type="button" class="btn btn-success" ng-click="$close()">閉じる</button>
+</div>
+<!-- </script> -->
+<!-- Modal for inProgress-->
